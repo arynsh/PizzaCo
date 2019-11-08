@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/scripts2.js"></script>
+    <title>Pizza Time!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h2>Pizza Co.</h2>
+        <p>Get your pizzas!</p>
+      </div>
+
+      <form id="user">
+        <div class="form-group">
+          <label for="size">Choose your size:</label>
+          <select class="form-control" id="size">
+            <option value="1">Regular</option>
+            <option value="2">Large</option>
+          </select>
+        </div>
+        <br><br>
+        <div class="form-group">
+          <p><b>Choose your toppings</b></p>
+          <input type="checkbox" name="toppings" value="1">Cheese<br>
+          <input type="checkbox" name="toppings" value="2">Veggies<br>
+          <input type="checkbox" name="toppings" value="3">Bacon<br>
+        </div>
+        <button type="submit" class="btn btn-info">Click here for pizza</button>
+      </form>
+
+      <div id="results">
+        <br>
+        <h2>The price of pizza:</h2>
+        <span class="output">Your pizza price is: $</span>
+      </div>
+
+    </div>
+  </body>
+</html>
