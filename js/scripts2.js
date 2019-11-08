@@ -33,24 +33,21 @@ $(document).ready(function() {
       var inputTopping = $(this).val();
       getToppings.push(inputTopping);
     });
-    console.log(getToppings);
-
-
 
     var inputSize = parseInt($("#size").val());
     var prices= 0;
     var iWantPizza = new Pizza(inputSize, getToppings, prices);
-    console.log(iWantPizza);
 
-    var toppingPrice = {"Cheese":2, "Veggies":2, "Bacon":2};
+    var toppingPrice = {"Cheese":12, "Veggies":12, "Bacon":12};
 
+    console.log("This is " + iWantPizza);
     for (var i = 0; i < getToppings.length; i++) {
-      if (getToppings[i]) {
-        iWantPizza.price += toppingPrice[i].value;
+      // console.log(getToppings[i]);
+        iWantPizza.price += toppingPrice[getToppings[i]];
       }
     };
 
-    iWantPizza.getPrice();
+    // iWantPizza.getPrice();
     $("#results").show();
     $(".output").append(iWantPizza.price);
   });
