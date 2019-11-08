@@ -1,27 +1,19 @@
 //business logic
+var toppingPrice = {"Cheese":2, "Veggies":2, "Bacon":2};
+
 function Pizza(inputSize, getToppings, prices) {
   this.size = inputSize;
   this.toppings = getToppings;
   this.price = prices;
 }
 
-
-
-// Pizza.prototype.getPrice = function () {
-//   if (this.size === 1 && this.toppings === 1) {
-//     this.price = 10;
-//   } else if (this.size === 1 && this.toppings === 2) {
-//     this.price = 12;
-//   } else if (this.size === 1 && this.toppings === 3) {
-//     this.price = 12;
-//   } else if (this.size === 2 && this.toppings === 1) {
-//     this.price = 12;
-//   } else if (this.size === 2 && this.toppings === 2) {
-//     this.price = 14;
-//   } else {                // } else if (this.size === 2 &&& this.toppings === 3) {
-//     this.price = 14;
-//   }
-// }
+Pizza.prototype.getPrice = function () {
+  for (var i = 0; i < this.toppings.length; i++) {
+    if (this.toppings[i]) {
+      this.price += toppingPrice[this.toppings[i]];
+    }
+  };
+}
 
 //user logic
 $(document).ready(function() {
@@ -38,16 +30,7 @@ $(document).ready(function() {
     var prices= 10;
     var iWantPizza = new Pizza(inputSize, getToppings, prices);
 
-    var toppingPrice = {"Cheese":2, "Veggies":2, "Bacon":2};
-
-    for (var i = 0; i < getToppings.length; i++) {
-              console.log(getToppings[i]);
-      if (getToppings[i]) {
-        iWantPizza.price += toppingPrice[getToppings[i]];
-      }
-    };
-
-    // iWantPizza.getPrice();
+    iWantPizza.getPrice();
     $("#results").show();
     $(".output").append(iWantPizza.price);
   });
