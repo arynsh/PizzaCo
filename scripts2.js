@@ -27,17 +27,30 @@ function Pizza(inputSize, getToppings, prices) {
 $(document).ready(function() {
   $("form#user").submit(function(event) {
     event.preventDefault();
+
     var getToppings = [];
     $("input:checkbox[name=toppings]:checked").each(function(){
       var inputTopping = $(this).val();
       getToppings.push(inputTopping);
     });
     console.log(getToppings);
+
+
+
     var inputSize = parseInt($("#size").val());
     var prices= 0;
     var iWantPizza = new Pizza(inputSize, getToppings, prices);
+    console.log(iWantPizza);
+
+    var toppingPrice = {"Cheese":2, "Veggies":2, "Bacon":2};
+
+    for (var i = 0; i < getToppings.length; i++) {
+      if (getToppings[i]) {
+        iWantPizza.price += toppingPrice[i].value;
+      }
+    };
+
     iWantPizza.getPrice();
-    // console.log(iWantPizza.getPrice());
     $("#results").show();
     $(".output").append(iWantPizza.price);
   });
