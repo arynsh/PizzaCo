@@ -18,7 +18,7 @@ Pizza.prototype.getPrice = function () {
     this.price = 16;
   } else if (this.size === 2 && this.toppings === "Cheese", "Veggies", "Bacon") {
     this.price = 18;
-  } else {                // } else if (this.size === 2 &&& this.toppings === 3) {
+  } else {
     this.price = 11;
   }
 }

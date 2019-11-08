@@ -35,14 +35,14 @@ $(document).ready(function() {
     });
 
     var inputSize = parseInt($("#size").val());
-    var prices= 0;
+    var prices= 10;
     var iWantPizza = new Pizza(inputSize, getToppings, prices);
 
-    var toppingPrice = {"Cheese":12, "Veggies":12, "Bacon":12};
+    var toppingPrice = {"Cheese":2, "Veggies":2, "Bacon":2};
 
-    console.log("This is " + iWantPizza);
     for (var i = 0; i < getToppings.length; i++) {
-      // console.log(getToppings[i]);
+              console.log(getToppings[i]);
+      if (getToppings[i]) {
         iWantPizza.price += toppingPrice[getToppings[i]];
       }
     };
