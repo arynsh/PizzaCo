@@ -13,6 +13,9 @@ Pizza.prototype.getPrice = function () {
       this.price += toppingPrice[this.toppings[i]];
     }
   };
+  if (this.size === 2) {
+    this.price += 10;
+  }
 }
 
 //user logic
