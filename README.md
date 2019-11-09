@@ -22,7 +22,7 @@ Please do not hesitate to contact me for whatever reason! I can be reached at sh
 
 ## Technologies Used
 
-The survey was created using HTML, CSS, JQuery, Bootstrap.
+The program was created using HTML, CSS, JQuery, Bootstrap.
 
 ### License
 
@@ -30,10 +30,10 @@ Copyright (c) 2019 Sharon Lee
 
 ## Specs
 
-1. The program will allow users to choose a pizza based on size and returns a price.
+1. The program will allow users to choose a plain pizza based on size and returns a price.
   Input: "Small plain pizza"
   Output: $10.00
-2. The program will allow users to choose a pizza based on toppings and returns a price.
+2. The program will allow users to choose a small size pizza based on toppings and returns a price.
   Input: "Extra Cheese, small"
   Output: $12.00
 3. The program will allow users to choose a pizza based on both size and toppings and returns a price
