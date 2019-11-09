@@ -9,9 +9,9 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h2>Pizza Co.</h2>
-        <p>Get your pizzas!</p>
+      <div class="jumbotron" style="background: url(bg.jpg)">
+        <h1>Pizza Co.</h1>
+        <b><p>Get your pizzas!</p></b>
       </div>
 
       <form id="user">
@@ -22,7 +22,7 @@
             <option value="2">Large</option>
           </select>
         </div>
-        <br><br>
+        <br>
         <div class="form-group">
           <p><b>Choose your toppings</b></p>
           <input type="checkbox" name="toppings" value="Cheese">Cheese<br>
@@ -32,11 +32,13 @@
         <button type="submit" class="btn btn-info">Click here for pizza</button>
       </form>
 
-
       <div id="results">
         <br>
-        <h2>The price of pizza:</h2>
-        <span class="output">Your pizza price is: $</span>
+        <b>Your pizza price is: $<span class="output"></span></b>
+        <br>
+        <p>Here's your pizza!!</p>
+        <br>
+        <img src="happypizza.jpg" width="300" height="300" alt="A pic of a pizza with a happy face made of pepperoni!">
       </div>
 
     </div>

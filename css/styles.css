@@ -1,8 +1,15 @@
-#results {
-  display: none;
-}
-
 .jumbotron {
   text-align: center;
   margin: 18px;
+  color: white;
+  /* opacity: 0.6; */
+}
+
+/* .jumbotron h1 {
+  color: black;
+} */
+
+#results {
+  display: none;
+  text-align: center;
 }
