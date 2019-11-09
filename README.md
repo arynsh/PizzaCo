@@ -36,6 +36,6 @@ Copyright (c) 2019 Sharon Lee
 2. The program will allow users to choose a small size pizza based on toppings and returns a price.
   Input: "Extra Cheese, small"
   Output: $12.00
-3. The program will allow users to choose a pizza based on both size and toppings and returns a price
-  Input: "Extra Cheese, large"
-  Output: $16.00
+3. The program will allow users to choose a pizza based on both size and number of toppings and returns a price
+  Input: "Extra Cheese, Veggies, large"
+  Output: $25.00
