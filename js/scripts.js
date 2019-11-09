@@ -1,4 +1,3 @@
-//business logic
 var toppingPrice = {"Cheese":2, "Veggies":2, "Bacon":2};
 
 function Pizza(inputSize, getToppings, prices) {
@@ -18,7 +17,6 @@ Pizza.prototype.getPrice = function () {
   }
 }
 
-//user logic
 $(document).ready(function() {
   $("form#user").submit(function(event) {
     event.preventDefault();
